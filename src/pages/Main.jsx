@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Arrows from "./components/Arrows";
-import Button from "./components/Button";
-import {images} from "./lib/images";
-import Testimonial from "./components/Testimonial";
+import Arrows from "../components/Arrows";
+import Button from "../components/Button";
+import {images} from "../lib/images";
+import Testimonial from "../components/Testimonial";
 
 function Main() {
     return (
