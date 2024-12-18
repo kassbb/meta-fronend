@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './assets/Logo.svg';
 import './Header.css';
+import {Link} from "react-router-dom";
 
 function Header() {
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -26,10 +27,10 @@ function Header() {
             </div>
             <nav>
                 <ul className={isMenuOpen ? 'open' : ''}>
-                    <li><a href="#">Home</a></li>
+                    <li><Link to="/">Home</Link></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Menu</a></li>
-                    <li><a href="#">Reservation</a></li>
+                    <li><Link to={'/booking'}> Reservation</Link></li>
                     <li><a href="#">Order Online</a></li>
                     <li><a href="#">Login</a></li>
                 </ul>

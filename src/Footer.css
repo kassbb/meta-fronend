@@ -1,5 +1,7 @@
 /* Style général du footer */
 footer {
+
+    top: 0;
     background-color: #333;  /* Fond sombre pour le footer */
     color: white;            /* Texte en blanc */
     padding: 40px 0;         /* Espacement autour du footer */

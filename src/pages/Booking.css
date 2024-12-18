@@ -1,0 +1,182 @@
+/* Section de base */
+.section {
+    background-color: #9C9C9C;
+    position: relative;
+    padding: 30px; /* Augmentation du padding pour rendre la section plus grande */
+}
+
+/* Titre de la section */
+.tiltle {
+    max-width: 80%;
+    margin: 50px auto 0 auto;
+    padding: 20px;
+    background: white;
+}
+
+.tiltle h1 {
+    text-align: center;
+    color: #495E57;
+    font-size: 1.8rem; /* Augmentation de la taille du titre */
+    border-bottom: 2px solid #9C9C9C;
+}
+
+/* Formulaire */
+form {
+    max-width: 60%;
+    margin: 50px auto;
+}
+
+/* Groupe de formulaire */
+.form-group {
+    margin-bottom: 25px; /* Augmentation de l'espace entre les champs */
+}
+
+/* Style des inputs, selects, et textareas */
+.input-container {
+    position: relative;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 20px 20px 20px 40px; /* Augmentation du padding pour agrandir les champs */
+    margin-top: 12px; /* Espacement entre le champ et le texte */
+    border: none;
+    border-radius: 8px;
+    background-color: #EDEFEE;
+    color: #9C9C9C;
+    font-size: 1.2rem; /* Augmentation de la taille de police */
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+/* Ajout de l'icône à droite */
+.input-container .icon {
+    position: absolute;
+    right: 20px;
+    top: 33%;
+    font-size: 1.7rem; /* Augmentation de la taille de l'icône */
+    transform: translateY(-45%);
+    color: #495E57;
+    pointer-events: none;
+}
+
+/* Placeholder dans les inputs */
+input::placeholder,
+select::placeholder,
+textarea::placeholder {
+    color: #9C9C9C;
+}
+
+/* Focus sur les champs */
+input:focus,
+select:focus,
+textarea:focus {
+    box-shadow: inset 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Style des messages d'erreur */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* Style des boutons */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Mise en page avec une grille pour les groupes de champs */
+.filset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px; /* Augmentation de l'espacement entre les champs */
+    margin-bottom: 30px;
+}
+
+.filset .form-group {
+    margin-bottom: 0;
+}
+
+/* Masquer les icônes des champs date et time sans désactiver la sélection */
+
+/* Afficher indoor et outdoor sur la même ligne */
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Agrandir la taille des icônes des boutons radio */
+.radio-group label {
+    font-size: 1.3rem; /* Augmentation de la taille du texte des labels */
+    display: flex;
+    align-items: center;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 10px; /* Ajout d'un peu d'espace entre le bouton radio et l'étiquette */
+    transform: scale(1.8); /* Agrandissement du bouton radio */
+}
+
+/* Si vous utilisez des icônes dans les labels, vous pouvez augmenter leur taille */
+.radio-group i {
+    font-size: 1.8rem; /* Agrandissement de l'icône */
+}
+
+/* Styles spécifiques au select d'occasion */
+select {
+    background-color: #EDEFEE;
+    color: #495E57;
+    font-size: 1.2rem; /* Taille du texte augmentée */
+    height: 60px; /* Augmentation de la hauteur du select */
+}
+
+/* Lors de la sélection dans le champ Occasion, changement de couleur */
+select:focus {
+    background-color: #495E57;
+    color: black;
+}
+/* Espacement entre les options du select */
+select option {
+    padding: 10px 20px; /* Ajouter du padding pour augmenter l'espacement interne */
+    margin-bottom: 5px; /* Ajouter de l'espacement entre les options */
+}
+
+
+
+/* Pour les options sélectionnées, changement de couleur de fond */
+select option:checked {
+    background-color: #495E57;
+    color: black;
+}
+
+/* Couleur par défaut du select lorsque rien n'est sélectionné */
+select:not(:focus):not(:valid) {
+    color: #9C9C9C; /* Couleur du texte quand aucune option n'est sélectionnée */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filset {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 20px; /* Moins de padding sur mobile */
+    }
+
+    .tiltle h1 {
+        font-size: 1.4rem; /* Taille du titre ajustée pour mobile */
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 1rem; /* Réduction de la taille des champs sur mobile */
+        padding: 15px 15px 15px 40px; /* Moins de padding sur mobile */
+    }
+}

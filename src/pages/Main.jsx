@@ -4,6 +4,8 @@ import Arrows from "../components/Arrows";
 import Button from "../components/Button";
 import {images} from "../lib/images";
 import Testimonial from "../components/Testimonial";
+import Special from "../components/Special";
+import {Link} from "react-router-dom";
 
 function Main() {
     return (
@@ -15,7 +17,7 @@ function Main() {
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam culpa cum cumque deleniti
                         dolore, ducimus iusto maiores natus neque nisi nostrum nulla numquam odit omnis, porro quisquam
                         repudiandae. Fugit, omnis.</p>
-                    <Button nom={"Reserve a table"}/>
+                   <Link to={'/booking'}> <Button nom={"Reserve a table"}/></Link>
                 </div>
                 <div className='baniere-img'>
                     <div>
@@ -24,70 +26,7 @@ function Main() {
                     </div>
                 </div>
             </section>
-            <section className="speciale">
-                <div className="speciale-content">
-                    <div className="title">
-                        <h1>This week's specials</h1>
-                        <Arrows/>
-                    </div>
-                    <Button nom={"Online Menu"}/>
-                </div>
-                <div className="cart">
-                    {/* Cart Item 1 */}
-                    <div className="cart-item">
-                        <div className="cart-img">
-                            <img src={images.greek_salad} alt="Greek Salad" width={265} height={185}/>
-                        </div>
-                        <div className="cart-content">
-                            <div className="cart-title">
-                                <h3>Greek Salad</h3>
-                                <h5>$33.95</h5>
-                            </div>
-                            <div className="cart-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic neque nulla velit
-                                    veritatis voluptatibus. Earum illo libero non possimus repudiandae.F</p>
-                            </div>
-                            <a href="#">Order a delivery <i></i></a>
-                        </div>
-                    </div>
-
-                    {/* Cart Item 2 */}
-                    <div className="cart-item">
-                        <div className="cart-img">
-                            <img src={images.bruchetta} alt="Bruchetta" width={265} height={185}/>
-                        </div>
-                        <div className="cart-content">
-                            <div className="cart-title">
-                                <h3>Bruchetta</h3>
-                                <h5>$12.95</h5>
-                            </div>
-                            <div className="cart-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic neque nulla velit
-                                    veritatis voluptatibus. Earum illo libero non possimus repudiandae.F</p>
-                            </div>
-                            <a href="#">Order a delivery <i></i></a>
-                        </div>
-                    </div>
-
-                    {/* Cart Item 3 */}
-                    <div className="cart-item">
-                        <div className="cart-img">
-                            <img src={images.lemon_dessert} alt="Lemon Dessert" width={265} height={185}/>
-                        </div>
-                        <div className="cart-content">
-                            <div className="cart-title">
-                                <h3>Lemon Dessert</h3>
-                                <h5>$8.95</h5>
-                            </div>
-                            <div className="cart-text">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic neque nulla velit
-                                    veritatis voluptatibus. Earum illo libero non possimus repudiandae.F</p>
-                            </div>
-                            <a href="#">Order a delivery <i></i></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+          <Special/>
             <section className='testimonial'>
                 <h2>Testimonials</h2>
 
