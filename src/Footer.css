@@ -1,0 +1,87 @@
+/* Style général du footer */
+footer {
+    background-color: #333;  /* Fond sombre pour le footer */
+    color: white;            /* Texte en blanc */
+    padding: 40px 0;         /* Espacement autour du footer */
+    text-align: center;      /* Centrer le texte */
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Conteneur principal pour le footer */
+footer div {
+
+    flex-direction: column; /* Par défaut, disposition verticale */
+    gap: 20px;              /* Espacement entre les colonnes */
+    margin-bottom: 20px;    /* Espacement sous les éléments du footer */
+}
+
+/* Style des titres dans le footer */
+footer h4 {
+    font-size: 1.5rem;          /* Taille de police des titres */
+    margin-bottom: 10px;        /* Espacement sous les titres */
+    color: #ffb703;             /* Couleur jaune pour les titres */
+}
+
+/* Liste des liens et informations dans le footer */
+footer ul {
+    list-style: none;           /* Retirer les puces de la liste */
+    padding: 0;
+    text-align: center;         /* Centrer les éléments des listes */
+}
+
+/* Liens dans les listes */
+footer ul li {
+    margin: 10px 0;             /* Espacement entre les éléments de la liste */
+}
+
+footer ul li a {
+    color: white;               /* Liens en blanc */
+    text-decoration: none;      /* Retirer les soulignements */
+    font-size: 1.1rem;          /* Taille de la police des liens */
+    transition: color 0.3s ease;
+}
+
+/* Effet de survol des liens */
+footer ul li a:hover {
+    color: #ffb703;             /* Couleur jaune au survol */
+}
+
+/* Pour les petits écrans (moins de 768px), le footer s'adapte */
+@media (max-width: 768px) {
+    footer div {
+        flex-direction: column;  /* Disposition verticale pour les petits écrans */
+        align-items: center;     /* Centrer le contenu */
+    }
+
+    footer ul {
+        text-align: center;      /* Centrer les liens des listes */
+    }
+}
+
+/* Pour les grands écrans (plus de 768px), le footer s'affiche en 3 colonnes */
+@media (max-width: 769px) {
+    footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer div {
+        max-width: 1200px;        /* Limiter la largeur maximale du footer */
+        margin: 0 auto;           /* Centrer le footer sur l'écran */
+        flex-direction: row;      /* Disposition en ligne (3 colonnes) */
+        justify-content: space-between; /* Espacement égal entre les colonnes */
+    }
+
+    footer div > div {
+        flex: 1;                  /* Chaque section (div) prendra 1/3 de la largeur */
+        padding: 0 20px;          /* Espacement interne pour les sections */
+    }
+
+    footer h4 {
+        text-align: left;         /* Alignement des titres à gauche pour les grands écrans */
+    }
+}

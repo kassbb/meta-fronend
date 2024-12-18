@@ -1,38 +1,101 @@
-/* Style pour l'en-tête */
+/* Header styles */
 header {
     display: flex;
-    justify-content: space-between; /* Espace entre le logo et la navigation */
+    gap: 1rem;
+    justify-content: center;
     align-items: center;
-    padding: 20px 40px;
-    background: white;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ajout d'une ombre subtile sous le header */
 }
 
 /* Logo */
 header img {
-    width: 120px; /* Largeur du logo */
-    height: auto;
+    width: 100px; /* Ajustez selon votre logo */
 }
 
-/* Style de la navigation */
+/* Menu Icon */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    z-index: 10; /* S'assurer que l'icône est au-dessus du contenu */
+}
+
+.menu-icon div {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: transform 0.4s ease, opacity 0.4s ease; /* Ajout d'une transition plus fluide */
+}
+
+/* Animation du menu hamburger */
+.menu-icon.open div:nth-child(1) {
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.menu-icon.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open div:nth-child(3) {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* Navigation */
 nav ul {
+    list-style-type: none;
     display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin-left: 30px;
+    gap: 20px;
+    transition: all 0.3s ease; /* Transition douce pour l'affichage */
 }
 
 nav ul li a {
-    color: #000; /* Couleur des liens changée en noir */
-    text-decoration: none; /* Enlever le souligné */
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-transform: uppercase; /* Texte en majuscules */
-    transition: color 0.3s ease;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Transition pour les couleurs au survol */
 }
 
 /* Effet au survol des liens */
 nav ul li a:hover {
-    color: #ffb703; /* Couleur dorée au survol */
+    color: #ffb703; /* Changement de couleur au survol */
+}
+
+/* Media query pour les écrans plus petits */
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Ajustez selon la hauteur de votre header */
+        left: 0;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 5; /* S'assurer que le menu est derrière l'icône */
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+
+/* Animation au survol de l'icône hamburger */
+.menu-icon:hover div {
+    background-color: #ffb703; /* Changement de couleur des barres au survol */
+}
+
+/* Effet de fondu sur l'icône menu lorsqu'on clique */
+.menu-icon.open div {
+    background-color: #ffb703; /* Changer la couleur des barres quand le menu est ouvert */
 }

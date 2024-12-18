@@ -1,189 +1,160 @@
-/* Global styles */
+/* RESET GÉNÉRAL */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
-  font-family: 'Helvetica Neue', sans-serif;
-  line-height: 1.6;
+  font-family: 'Arial', sans-serif;
+  color: #333;
   background-color: #fff;
-  color: #333;
+  line-height: 1.6;
 }
 
-h2, h3, h4, h5 {
-  font-weight: 600;
-  color: #333;
+/* SECTION BANNIÈRE */
+.baniere {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 100px;
+  background-color: #495E57; /* Vert foncé */
+  color: white;
+  flex-wrap: wrap; /* Permet à la bannière de se réorganiser */
+  gap: 40px; /* Ajout d'un espacement entre les éléments */
+  border-bottom: 5px solid #F4CE14; /* Bordure jaune pour plus de style */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Légère ombre portée pour un effet 3D */
+  transition: all 0.3s ease;
 }
 
-h1 {
-  color: #F4CE14;
+.baniere:hover {
+  background-color: #3c4f44; /* Changement de couleur au survol */
 }
 
-a {
-  text-decoration: none;
-  color: #ffb703; /* Oranges vibrant */
-  transition: color 0.3s ease;
+.baniere-content {
+  flex: 1; /* Permet à cette section de prendre l'espace restant */
+  max-width: 500px; /* Limite la largeur du texte */
 }
 
-a:hover {
-  color: #f0a500;
-}
-
-button {
-  cursor: pointer;
-  background-color: #ffb703;
-  color: #fff;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: 600;
+.baniere-content h1 {
+  font-size: 3.5rem; /* Taille du titre */
+  font-weight: bold;
+  margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+}
+
+.baniere-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.baniere-img {
+  text-align: center;
+  flex: 1; /* Permet à cette section de prendre l'espace restant */
+  margin-left: 40px; /* Ajout d'une marge à gauche pour éloigner l'image du texte */
+}
+
+.baniere-img img {
+  max-width: 90%; /* L'image prend presque toute la largeur */
+  height: auto;
+  border-radius: 10px; /* Bordures arrondies pour une touche moderne */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Ombre portée pour l'image */
+  transition: transform 0.3s ease-in-out;
+}
+
+.baniere-img img:hover {
+  transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+/* Bouton */
+button {
+  background-color: #F4CE14;
+  color: #333;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #f0a500;
+  background-color: #e2b60f; /* Changement de couleur au survol */
 }
 
-/* Section Baniere */
-.baniere {
-  display: flex;
-  justify-content: space-between;
-  padding: 100px 60px;
-  background-color: #333;
-  color: #fff;
-  align-items: center;
-
-}
-
-.baniere-content {
-  max-width: 550px;
-  margin:20px 100px;
-}
-
-.baniere-content h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-.baniere-content h3 {
-  color: #fff;
-}
-
-.baniere-content h3 {
-  font-size: 1.6rem;
-  margin-bottom: 20px;
-}
-
-.baniere-content p {
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-  line-height: 1.5;
-}
-
-.baniere-img {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.baniere-img button {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-  background-color: #ffb703;
-  color: #333;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 12px 20px;
-  border-radius: 50px;
-}
-
-.baniere-img img {
-  width: 100%;
-  max-width: 500px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Section Spéciale */
+/* SECTION SPECIALS */
 .speciale {
-  padding: 80px 60px;
-  background-color: #fff;
-  margin:20px 100px;
+  padding: 60px 80px;
+  text-align: center;
 }
 
-.speciale-content .title {
+.speciale-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Permet aux éléments de se réorganiser */
+}
+
+.title h1 {
+  font-size: 2.5rem;
 }
 
 .cart {
   display: flex;
-  gap: 30px;
+  gap: 20px;
   justify-content: space-between;
-  flex-wrap: wrap; /* Permet aux éléments de se réorganiser en ligne sur petits écrans */
+  flex-wrap: wrap; /* Permet aux éléments de se réorganiser */
 }
 
 .cart-item {
-  background-color: #fafafa;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   width: 30%;
-  padding: 25px;
-  border-radius: 20px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  text-align: center;
   transition: transform 0.3s ease;
 }
 
 .cart-item:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px); /* Effet de survol */
 }
 
 .cart-img img {
   width: 100%;
   height: auto;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-.cart-title h3 {
-  font-size: 1.8rem;
-  margin-top: 20px;
+.cart-content {
+  padding: 15px;
 }
 
-.cart-title h5 {
-  font-size: 1.4rem;
-  color: #ffb703;
+.cart-title {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
 }
 
 .cart-text p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  margin: 10px 0;
 }
 
-.cart-item a {
-  color: #ffb703;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-top: 15px;
+.cart-content a {
   display: inline-block;
-  letter-spacing: 1px;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+  margin-top: 10px;
 }
 
-/* Section Témoignages */
+/* SECTION TESTIMONIAL */
 .testimonial {
-  padding: 80px 60px;
-  background-color: #f4f4f4;
+  background-color: #EDEFEE;
+  padding: 60px 80px;
 }
 
 .testimonial h2 {
@@ -196,7 +167,7 @@ button:hover {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  flex-wrap: wrap; /* Permet aux éléments de se réorganiser en ligne sur petits écrans */
+  flex-wrap: wrap; /* Permet aux éléments de se réorganiser */
 }
 
 .termonial-item {
@@ -206,6 +177,11 @@ button:hover {
   border-radius: 15px;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.termonial-item:hover {
+  transform: translateY(-10px); /* Effet de survol */
 }
 
 .item-img {
@@ -236,8 +212,7 @@ button:hover {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  margin-left: 100px;
-  flex-wrap: nowrap; /* Évite le passage à la ligne */
+  flex-wrap: wrap; /* Permet aux éléments de se réorganiser */
 }
 
 .part1, .part2 {
@@ -279,24 +254,30 @@ button:hover {
   opacity: 1; /* Restauration de l'opacité */
 }
 
-/* Media Queries pour petits écrans */
-@media (max-width: 768px) {
+/* RESPONSIVE IMPROVEMENTS */
+
+/* Petits écrans (moins de 992px) */
+@media (max-width: 992px) {
   .baniere {
     flex-direction: column;
-    padding: 50px 20px;
+    padding: 40px 20px;
   }
 
-  .baniere-content {
-    max-width: 100%;
+  .baniere-content, .baniere-img {
+    width: 100%;
   }
 
-  .cart {
+  .baniere-img {
+    margin-top: 20px;
+  }
+
+  .speciale-content {
+    flex-direction: column;
     gap: 20px;
   }
 
   .cart-item {
-    width: 100%;
-    margin-bottom: 20px;
+    width: 100%; /* Cartes pleine largeur */
   }
 
   .testimonial-list {
@@ -305,38 +286,96 @@ button:hover {
 
   .termonial-item {
     width: 100%;
-    margin-bottom: 20px;
   }
 
   .about {
     flex-direction: column;
-    padding: 50px 20px;
+    gap: 20px;
+    padding: 40px 20px;
   }
 
   .part1, .part2 {
     width: 100%;
   }
+
+  .part2 {
+    justify-content: center;
+  }
 }
 
-@media (max-width: 480px) {
-  h1 {
-    font-size: 2.5rem;
-  }
-
-  h2 {
+/* Très petits écrans (moins de 768px) */
+@media (max-width: 768px) {
+  h1, .baniere-content h1 {
     font-size: 2rem;
   }
 
-  h3 {
-    font-size: 1.4rem;
-  }
-
-  h4 {
+  h3, .baniere-content h3 {
     font-size: 1.2rem;
   }
 
-  button {
-    font-size: 14px;
-    padding: 10px 20px;
+  p, .baniere-content p {
+    font-size: 1rem;
+  }
+
+  .baniere-content button, .baniere-img button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .termonial-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .part2 img {
+    max-width: 90%;
+  }
+}
+
+/* Écrans ultra-petits (moins de 480px) */
+@media (max-width: 480px) {
+  h1, .baniere-content h1 {
+    font-size: 1.8rem;
+  }
+
+  h3, .baniere-content h3 {
+    font-size: 1rem;
+  }
+
+  p, .baniere-content p {
+    font-size: 0.9rem;
+  }
+
+  .baniere-img {
+    display: flex;
+  }
+
+  .baniere-content button, button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .baniere-img {
+    position: relative;
+    max-width: 90%;
+    padding: 6px;
+    margin: 0 auto;
+  }
+
+  .cart-item {
+    margin-bottom: 15px;
+  }
+
+  .testimonial h2 {
+    font-size: 1.8rem;
+  }
+
+  .termonial-item {
+    padding: 15px;
+  }
+
+  .part2 img {
+    margin-top: 50px;
+    max-width: 100%;
   }
 }
