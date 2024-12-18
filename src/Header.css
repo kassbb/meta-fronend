@@ -1,0 +1,38 @@
+/* Style pour l'en-tête */
+header {
+    display: flex;
+    justify-content: space-between; /* Espace entre le logo et la navigation */
+    align-items: center;
+    padding: 20px 40px;
+    background: white;
+}
+
+/* Logo */
+header img {
+    width: 120px; /* Largeur du logo */
+    height: auto;
+}
+
+/* Style de la navigation */
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: #000; /* Couleur des liens changée en noir */
+    text-decoration: none; /* Enlever le souligné */
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase; /* Texte en majuscules */
+    transition: color 0.3s ease;
+}
+
+/* Effet au survol des liens */
+nav ul li a:hover {
+    color: #ffb703; /* Couleur dorée au survol */
+}

@@ -1,0 +1,6 @@
+.arrows {
+    display: flex;
+    gap: 20px;  /* Espacement entre les flèches */
+    justify-content: center;
+    align-items: center;
+}
