@@ -12,6 +12,7 @@
     "react-router-dom": "^7.0.2",
     "react-scripts": "5.0.1",
     "react-select": "^5.9.0",
+    "sweetalert2": "^11.15.2",
     "web-vitals": "^4.2.4"
   },
   "scripts": {
@@ -37,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.1.0"
   }
 }

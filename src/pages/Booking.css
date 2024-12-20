@@ -24,11 +24,37 @@
 form {
     max-width: 60%;
     margin: 50px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Deux colonnes pour les champs */
+    gap: 20px; /* Espacement entre les champs */
 }
 
-/* Groupe de formulaire */
+/* Champs occupant une seule colonne */
 .form-group {
-    margin-bottom: 25px; /* Augmentation de l'espace entre les champs */
+    margin-bottom: 25px;
+}
+.form-btn {
+    grid-column: span 2; /* S'étend sur deux colonnes (si formulaire à deux colonnes) */
+    text-align: center; /* Centre le bouton horizontalement */
+    margin-top: 20px; /* Ajoute un espace au-dessus */
+}
+.form-area{
+    grid-column: span 2;
+}
+.seating-radio label {
+    margin-right: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.seating-radio input[type="radio"] {
+    margin-right: 5px;
+}
+
+/* Champs occupant deux colonnes */
+textarea {
+    grid-column: span 2; /* S'étend sur deux colonnes */
+    width: 100%; /* Assure que la largeur est complète */
 }
 
 /* Style des inputs, selects, et textareas */
@@ -89,80 +115,10 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Mise en page avec une grille pour les groupes de champs */
-.filset {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px; /* Augmentation de l'espacement entre les champs */
-    margin-bottom: 30px;
-}
-
-.filset .form-group {
-    margin-bottom: 0;
-}
-
-/* Masquer les icônes des champs date et time sans désactiver la sélection */
-
-/* Afficher indoor et outdoor sur la même ligne */
-.radio-group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Agrandir la taille des icônes des boutons radio */
-.radio-group label {
-    font-size: 1.3rem; /* Augmentation de la taille du texte des labels */
-    display: flex;
-    align-items: center;
-}
-
-.radio-group input[type="radio"] {
-    margin-right: 10px; /* Ajout d'un peu d'espace entre le bouton radio et l'étiquette */
-    transform: scale(1.8); /* Agrandissement du bouton radio */
-}
-
-/* Si vous utilisez des icônes dans les labels, vous pouvez augmenter leur taille */
-.radio-group i {
-    font-size: 1.8rem; /* Agrandissement de l'icône */
-}
-
-/* Styles spécifiques au select d'occasion */
-select {
-    background-color: #EDEFEE;
-    color: #495E57;
-    font-size: 1.2rem; /* Taille du texte augmentée */
-    height: 60px; /* Augmentation de la hauteur du select */
-}
-
-/* Lors de la sélection dans le champ Occasion, changement de couleur */
-select:focus {
-    background-color: #495E57;
-    color: black;
-}
-/* Espacement entre les options du select */
-select option {
-    padding: 10px 20px; /* Ajouter du padding pour augmenter l'espacement interne */
-    margin-bottom: 5px; /* Ajouter de l'espacement entre les options */
-}
-
-
-
-/* Pour les options sélectionnées, changement de couleur de fond */
-select option:checked {
-    background-color: #495E57;
-    color: black;
-}
-
-/* Couleur par défaut du select lorsque rien n'est sélectionné */
-select:not(:focus):not(:valid) {
-    color: #9C9C9C; /* Couleur du texte quand aucune option n'est sélectionnée */
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-    .filset {
-        grid-template-columns: 1fr;
+    form {
+        grid-template-columns: 1fr; /* Passe à une seule colonne sur mobile */
     }
 
     .section {
