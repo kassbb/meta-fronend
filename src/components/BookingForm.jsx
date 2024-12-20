@@ -1,17 +1,17 @@
 import React from 'react';
-import { Formik } from "formik";
+import {Formik} from "formik";
 import Swal from "sweetalert2";
-import { FaCalendarAlt, FaClock, FaMapMarkerAlt, FaUsers } from "react-icons/fa";
-import { BiDrink } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";  // Importer useNavigate
-import { submitAPI } from "../lib/Api";  // Assurez-vous que submitAPI est correctement importé
+import {FaCalendarAlt, FaClock, FaMapMarkerAlt, FaUsers} from "react-icons/fa";
+import {BiDrink} from "react-icons/bi";
+import {useNavigate} from "react-router-dom";  // Importer useNavigate
+import {submitAPI} from "../lib/Api";  // Assurez-vous que submitAPI est correctement importé
 
-function BookingForm({ availableTimes, dispatch, submitAPI }) {
-    const navigate = useNavigate();  // Initialiser navigate
+function BookingForm({availableTimes, dispatch, submitAPI}) {
+    const navigate = useNavigate();
 
     const handleDateChange = (event) => {
         const selectedDate = event.target.value;
-        dispatch({ type: "update", payload: selectedDate });
+        dispatch({type: "update", payload: selectedDate});
     };
 
     return (
@@ -26,7 +26,7 @@ function BookingForm({ availableTimes, dispatch, submitAPI }) {
                     specialRequests: "",
                     seating: "",
                 }}
-                onSubmit={(values, { setSubmitting, resetForm }) => {
+                onSubmit={(values, {setSubmitting, resetForm}) => {
                     // SweetAlert2 pour la confirmation
                     Swal.fire({
                         title: "Confirm your booking",
